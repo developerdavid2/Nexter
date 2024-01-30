@@ -1,0 +1,91 @@
+.footer {
+    background-color: $color-secondary;
+    grid-column: full-start / full-end;
+    display: grid;
+    padding: 7rem 8rem 10rem;
+    grid-row-gap: 3rem;
+
+    &__logo {
+        text-align: center;
+    }
+
+    &__list {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+        grid-gap: 2rem;
+        justify-content: center;
+    }
+
+    &__link:link,
+    &__link:visited {
+        text-decoration: none;
+        text-align: center;
+        font-size: 1.5rem;
+        font-family: $font-display;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 500;
+        display: block;
+        padding: 1.5rem 2rem;
+        transition: all .2s;
+
+        &:hover {
+            background-color: rgba($color-primary-dark, 0.5);
+            transform: translateY(-.3rem)
+        }
+    }
+
+    &__social-media {
+        display: inline-block;
+    }
+
+    &__icons {
+        display: flex;
+        margin-top: 2rem;
+        grid-gap: 1rem;
+        justify-content: center;
+
+        .icon {
+            display: flex;
+            align-items: center;
+            background-color: $color-primary-dark;
+            cursor: pointer;
+            justify-content: center;
+            border-radius: 50%;
+            width: 5rem;
+            height: 5rem;
+            transition: all .4s;
+            text-decoration: none;
+
+            i {
+                font-size: 2.5rem;
+                color: $color-grey-light-1;
+                margin: 0 1rem;
+            }
+
+            &:hover {
+                background-color: $color-secondary-light;
+
+                i {
+                    color: $color-grey-light-1;
+                }
+            }
+
+        }
+    }
+
+    &__copyright {
+        font-size: 1.8rem;
+        color: $color-grey-light-2;
+        text-align: center;
+    }
+}
+
+.copyright__link {
+    color: $color-primary;
+
+    &:hover {
+        color: $color-grey-light-1;
+    }
+}
